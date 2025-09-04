@@ -1,8 +1,8 @@
 {
   "name": "booking",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "version": "1.0.0",
+  "description": "Booking service for reservations",
+  "author": "Loïc Thiercelin",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
