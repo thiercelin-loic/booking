@@ -1,15 +1,15 @@
 # Booking System
 
-A modern workplace booking application for managing public and semi-public workspaces.
+A modern booking application for managing public and semi-public resources.
 
 ## Overview
 
-This booking system provides a comprehensive solution for searching, booking, and reviewing public workplaces such as coworking spaces, libraries, meeting rooms, and other professional environments. Inspired by Airbnb's model but focused specifically on work environments, this application connects users with available workspace options.
+This booking system provides a comprehensive solution for searching, booking, and reviewing public or private resources such as rooms, venues, equipment, or any other reservable items. Inspired by Airbnb's model but designed for general-purpose usage, this application connects users with available options for any kind of booking scenario.
 
 ## Features
 
 ### Listings Management
-- Complete CRUD operations for workplace listings
+- Complete CRUD operations for listings
 - Detailed listing information including name, description, location, amenities, photos, availability, and pricing
 - Search and filter capabilities
 
@@ -19,7 +19,7 @@ This booking system provides a comprehensive solution for searching, booking, an
 - Booking confirmation and cancellation workflows
 
 ### Reviews & Ratings
-- User review and rating system for workplaces
+- User review and rating system for any resource
 - Admin moderation of reviews
 
 ### Notifications
@@ -94,11 +94,11 @@ The application exposes the following main API endpoints:
 - `DELETE /listings/:id` - Delete a listing
 
 ### Bookings
-- `GET /booking` - Get all bookings
-- `GET /booking/:id` - Get a specific booking
-- `POST /booking` - Create a new booking
-- `PATCH /booking/:id` - Update a booking
-- `DELETE /booking/:id` - Delete a booking
+- `GET /bookings` - Get all bookings
+- `GET /bookings/:id` - Get a specific booking
+- `POST /bookings` - Create a new booking
+- `PATCH /bookings/:id` - Update a booking
+- `DELETE /bookings/:id` - Delete a booking
 
 ### Reviews
 - `GET /reviews` - Get all reviews
