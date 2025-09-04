@@ -6,10 +6,8 @@ import { AppController } from 'src/controllers/app.controller';
 import { AppService } from 'src/services/app.service';
 
 import { ListingsModule } from './listings.module';
-import { BookingModule } from './booking.module';
+import { BookingsModule } from './bookings.module';
 import { ReviewsModule } from './reviews.module';
-import { NotificationModule } from './notification.module';
-import { AdministrationModule } from './administration.module';
 
 @Module({
   imports: [
@@ -29,10 +27,8 @@ import { AdministrationModule } from './administration.module';
       }),
     }),
     ListingsModule,
-    BookingModule,
+    BookingsModule,
     ReviewsModule,
-    NotificationModule,
-    AdministrationModule
   ],
   controllers: [AppController],
   providers: [AppService],
