@@ -5,6 +5,10 @@ export class CreateBookingsDto {
     @IsUUID()
     id: number;
 
+    @IsInt()
+    @IsUUID()
+    listing: number;
+
     @IsString()
     @MaxLength(100)
     user: string;
@@ -15,7 +19,11 @@ export class CreateBookingsDto {
 
     @IsString()
     @MaxLength(10)
-    time: string;
+    arrival: string;
+
+    @IsString()
+    @MaxLength(10)
+    departure: string;
 
     @IsBoolean()
     confirmation: boolean;
