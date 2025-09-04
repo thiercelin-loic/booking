@@ -97,7 +97,30 @@ The application exposes the following main API endpoints:
 - `GET /bookings` - Get all bookings
 - `GET /bookings/:id` - Get a specific booking
 - `POST /bookings` - Create a new booking
+   - Body example:
+      ```json
+      {
+         "id": 1,
+         "listing": 1,
+         "user": "John Doe",
+         "date": "2025-09-04",
+         "arrival": "10:00",
+         "departure": "18:00",
+         "confirmation": true
+      }
+      ```
 - `PATCH /bookings/:id` - Update a booking
+   - Body example:
+      ```json
+      {
+         "listing": 2,
+         "user": "Jane Doe",
+         "date": "2025-09-05",
+         "arrival": "11:00",
+         "departure": "17:00",
+         "confirmation": false
+      }
+      ```
 - `DELETE /bookings/:id` - Delete a booking
 
 ### Reviews
