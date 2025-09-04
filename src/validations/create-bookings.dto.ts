@@ -1,6 +1,6 @@
 import { IsBoolean, IsInt, IsString, IsUUID, MaxLength } from "class-validator";
 
-export class CreateBookingDto {
+export class CreateBookingsDto {
     @IsInt()
     @IsUUID()
     id: number;
