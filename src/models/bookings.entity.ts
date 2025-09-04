@@ -1,7 +1,6 @@
-
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity('booking')
+@Entity('bookings')
 export class Booking {
     @PrimaryGeneratedColumn('increment')
     id: number;
