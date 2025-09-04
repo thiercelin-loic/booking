@@ -2,18 +2,18 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { CreateBookingDto } from 'src/validations/create-booking.dto';
-import { UpdateBookingDto } from 'src/validations/update-booking.dto';
-import { Booking } from 'src/models/booking.entity';
+import { CreateBookingsDto } from 'src/validations/create-bookings.dto';
+import { UpdateBookingsDto } from 'src/validations/update-bookings.dto';
+import { Booking } from 'src/models/bookings.entity';
 
 @Injectable()
-export class BookingService {
+export class BookingsService {
   constructor(
     @InjectRepository(Booking)
     private repository: Repository<Booking>,
   ) {}
 
-  create(pattern: CreateBookingDto) {
+  create(pattern: CreateBookingsDto) {
     const booking = this.repository.create(pattern);
     return this.repository.save(booking);
   }
@@ -26,7 +26,7 @@ export class BookingService {
     return this.repository.findOne({ where: { id } });
   }
 
-  update(id: number, pattern: UpdateBookingDto) {
+  update(id: number, pattern: UpdateBookingsDto) {
     return this.repository.update(id, pattern);
   }
 
