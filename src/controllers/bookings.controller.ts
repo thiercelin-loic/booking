@@ -3,7 +3,6 @@ import { BookingsService } from 'src/services/bookings.service';
 import { CreateBookingsDto } from 'src/validations/create-bookings.dto';
 import { UpdateBookingsDto } from 'src/validations/update-bookings.dto';
 
-@Controller('booking')
 @Controller('bookings')
 export class BookingsController {
   constructor(private readonly service: BookingsService) {}
