@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "Booking API",
+    "name": "v1",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -33,7 +33,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"propertyId\": 1,\n  \"userId\": 1,\n  \"startDate\": \"2025-09-04\",\n  \"endDate\": \"2025-09-10\"\n}"
+              "raw": "{\n  \"id\": 1,\n  \"listing\": 1,\n  \"user\": \"John Doe\",\n  \"date\": \"2025-09-04\",\n  \"arrival\": \"10:00\",\n  \"departure\": \"18:00\",\n  \"confirmation\": true\n}"
             },
             "url": "{{base_url}}/bookings"
           }
@@ -50,7 +50,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"startDate\": \"2025-09-05\",\n  \"endDate\": \"2025-09-12\"\n}"
+              "raw": "{\n  \"listing\": 2,\n  \"user\": \"Jane Doe\",\n  \"date\": \"2025-09-05\",\n  \"arrival\": \"11:00\",\n  \"departure\": \"17:00\",\n  \"confirmation\": false\n}"
             },
             "url": "{{base_url}}/bookings/:id"
           }
@@ -93,7 +93,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"Sample Listing\",\n  \"description\": \"A nice place\",\n  \"price\": 100\n}"
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"Sample Listing\",\n  \"description\": \"A nice place\",\n  \"location\": \"Paris\",\n  \"amenities\": \"WiFi, Coffee\",\n  \"photo\": \"url.jpg\",\n  \"availability\": \"2025-09-04\",\n  \"pricing\": 100\n}"
             },
             "url": "{{base_url}}/listings"
           }
@@ -110,7 +110,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"price\": 120\n}"
+              "raw": "{\n  \"name\": \"Updated Listing\",\n  \"description\": \"Updated description\",\n  \"location\": \"Lyon\",\n  \"amenities\": \"WiFi, Snacks\",\n  \"photo\": \"newurl.jpg\",\n  \"availability\": \"2025-09-10\",\n  \"pricing\": 120\n}"
             },
             "url": "{{base_url}}/listings/:id"
           }
@@ -153,7 +153,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"listingId\": 1,\n  \"userId\": 1,\n  \"rating\": 5,\n  \"comment\": \"Great!\"\n}"
+              "raw": "{\n  \"id\": 1,\n  \"listing\": 1,\n  \"booking\": 1,\n  \"user\": 1,\n  \"content\": \"Great!\",\n  \"rating\": 5\n}"
             },
             "url": "{{base_url}}/reviews"
           }
@@ -170,7 +170,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"rating\": 4,\n  \"comment\": \"Good!\"\n}"
+              "raw": "{\n  \"content\": \"Good!\",\n  \"rating\": 4\n}"
             },
             "url": "{{base_url}}/reviews/:id"
           }
